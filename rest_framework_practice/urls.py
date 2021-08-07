@@ -19,5 +19,5 @@ from social.views import UserCreate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/',UserCreate.as_view())
+    path('register/',UserCreate.as_view()),
 ]
