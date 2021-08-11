@@ -1,5 +1,10 @@
+
+from django.db.models.base import Model
 from rest_framework.serializers import ModelSerializer
 from django.contrib.auth.models import User
+from social.models import Profile
+
+
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
@@ -12,4 +17,10 @@ class UserSerializer(ModelSerializer):
         user.set_password(password)
         user.save()
         return user
+
+#Profile model serializer
+class ProfileSerializer(ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = '__all__'
 

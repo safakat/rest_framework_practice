@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',UserCreate.as_view()),
     path('account/',include('accounts.urls')),
+    path('social/',include('social.urls')),
 ]
